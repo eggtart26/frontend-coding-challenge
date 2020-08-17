@@ -1,4 +1,5 @@
 import React from 'react';
+import {daysAgo} from '../../date/date.js'
 
 const Repository = (props) => {
 
@@ -16,6 +17,8 @@ const Repository = (props) => {
         var issuesCount = open_issues_count;
       }
 
+      var createdAtDaysAgo = daysAgo(created_at)
+
     return (
         <div>
             <div>
@@ -26,7 +29,7 @@ const Repository = (props) => {
             <div>
                <div>Stars: {statCount}</div>
                <div>Issues: {issuesCount}</div>
-               <div>Submitted XX days ago by {owner.login}</div>
+               <div>Submitted {createdAtDaysAgo} days ago by {owner.login}</div>
             </div>
         </div>
     )
