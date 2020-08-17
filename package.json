@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/eggtart26/frontend-coding-challenge#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "webpack": "^4.44.1"
   },
