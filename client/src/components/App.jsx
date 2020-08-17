@@ -19,7 +19,7 @@ class App extends React.Component {
         Axios.get('https://api.github.com/search/repositories?q=created:>2018-07-15&sort=stars&order=desc&page=1')
         .then((getData) => {
             this.setState({
-                reposData: getData
+                reposData: [...getData.data.items]
             })
         })
         .catch(this.handelError)
@@ -30,11 +30,9 @@ class App extends React.Component {
     }
 
     render() {
-        console.log(this.state.reposData,'reposdata')
         return (
             <div>
-                <div>App.jsx working</div>
-                <RepositoriesForm />
+                <RepositoriesForm reposData={this.state.reposData} />
             </div>
         )
     }

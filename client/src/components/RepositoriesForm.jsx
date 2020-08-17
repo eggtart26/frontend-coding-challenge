@@ -2,13 +2,13 @@ import React from 'react';
 import Repository from './Repository.jsx'
 
 
-const RepositoriesForm = (props) => {
+var RepositoriesForm = (props) => {
+
     return(
         <div>
-            <div>RepositoriesForm Working</div>
-            <Repository />
+        {props.reposData.map((repos, index) => <Repository key={index} repo={repos}/>)}
         </div>
-    )
+    );
 }
 
-export default RepositoriesForm;
+export default RepositoriesForm; 
