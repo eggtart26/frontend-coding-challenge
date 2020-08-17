@@ -4,6 +4,18 @@ const Repository = (props) => {
 
     const { created_at, name, description, stargazers_count, open_issues_count, owner } = props.repo;
 
+    if(stargazers_count >= 1000) {
+        var statCount = stargazers_count / 1000 +"k";
+      } else {
+        var statCount = stargazers_count;
+      }
+  
+      if(open_issues_count >= 1000) {
+        var issuesCount = open_issues_count / 1000 +"k";
+      } else {
+        var issuesCount = open_issues_count;
+      }
+
     return (
         <div>
             <div>
@@ -12,8 +24,8 @@ const Repository = (props) => {
             <h1>{name}</h1>
             <p>{description}</p>
             <div>
-               <div>Stars: {stargazers_count}</div>
-               <div>Issues: {open_issues_count}</div>
+               <div>Stars: {statCount}</div>
+               <div>Issues: {issuesCount}</div>
                <div>Submitted XX days ago by {owner.login}</div>
             </div>
         </div>

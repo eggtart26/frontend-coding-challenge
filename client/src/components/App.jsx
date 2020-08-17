@@ -16,7 +16,7 @@ class App extends React.Component {
     }
 
     getRepos() {
-        Axios.get('https://api.github.com/search/repositories?q=created:>2018-07-15&sort=stars&order=desc&page=1')
+        Axios.get('https://api.github.com/search/repositories?q=created:>2020-07-15&sort=stars&order=desc&page=1')
         .then((getData) => {
             this.setState({
                 reposData: [...getData.data.items]
