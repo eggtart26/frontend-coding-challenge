@@ -1,4 +1,4 @@
-// var input = '2020-07-17T01:28:03Z'
+
 export function daysAgo(input) {
     const nowDate = new Date();
     const createDate = new Date(input);
@@ -21,10 +21,5 @@ export function date() {
     if(day<10) {
         var day = '0' + day;
     }
-    //2017-10-22
-    // console.log(date)
-    // console.log(year)
-    // console.log(month)
-    // console.log(day)
     return `${year}-${month}-${day}`
 };
