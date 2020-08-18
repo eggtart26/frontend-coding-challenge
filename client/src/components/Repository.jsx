@@ -20,16 +20,18 @@ const Repository = (props) => {
       var createdAtDaysAgo = daysAgo(created_at)
 
     return (
-        <div>
-            <div>
+        <div className='mainRepo'>
+            <div className='avatar'>
                 <img src={owner.avatar_url} alt={"user's name" + owner.login} />
             </div>
+            <div>
             <h1>{name}</h1>
             <p>{description}</p>
-            <div>
+            <div className='countBox'>
                <div>Stars: {statCount}</div>
                <div>Issues: {issuesCount}</div>
-               <div>Submitted {createdAtDaysAgo} days ago by {owner.login}</div>
+               <p>Submitted {createdAtDaysAgo} days ago by {owner.login}</p>
+            </div>
             </div>
         </div>
     )

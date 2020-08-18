@@ -1,0 +1,40 @@
+.mainRepo {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 5px 200px #9da1dd;
+    margin: 1.5vh;
+}
+
+.countBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.countBox div {
+    border: 1.5px solid rgb(53, 50, 50);
+    height: 20px;
+    line-height: 20px;
+    margin-right: 1vw;
+    padding: 4px;
+    vertical-align: middle;
+}
+
+p {
+    font-family:"Times New Roman", Times, serif;
+}
+
+.avatar {
+    height: 160px;
+    width: 160px;
+    padding: 5px;
+}
+
+img {
+    height: auto;
+    width: 100%;
+    border-radius: 1%;
+}
+
+
+
