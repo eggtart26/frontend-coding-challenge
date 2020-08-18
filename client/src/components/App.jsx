@@ -1,6 +1,7 @@
 import React from 'react';
 import RepositoriesForm from './RepositoriesForm.jsx';
 import Axios from 'axios';
+import {date} from '../../date/date.js'
 
 class App extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class App extends React.Component {
     }
 
     getRepos() {
-        Axios.get('https://api.github.com/search/repositories?q=created:>2020-07-15&sort=stars&order=desc&page=1')
+        Axios.get(`https://api.github.com/search/repositories?q=created:>${date()}&sort=stars&order=desc&page=1`)
         .then((getData) => {
             this.setState({
                 reposData: [...getData.data.items]

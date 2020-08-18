@@ -8,3 +8,23 @@ export function daysAgo(input) {
     var dayAgo = Math.floor((millisecondsNow - millisecondsCrate) / (1000 * 3600 * 24))
     return dayAgo;
 }
+
+export function date() {
+    const date = new Date();
+    var year = date.getYear()+1900;
+    var month = date.getMonth()
+    var day = date.getDate();
+    
+    if(month<10) {
+        var month = '0' + month;
+    }
+    if(day<10) {
+        var day = '0' + day;
+    }
+    //2017-10-22
+    // console.log(date)
+    // console.log(year)
+    // console.log(month)
+    // console.log(day)
+    return `${year}-${month}-${day}`
+};
